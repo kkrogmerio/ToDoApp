@@ -2,7 +2,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Please run npm run fresh-install to install all the particularities.
+>**Note**: Please run npm run fresh-install to install all the particularities..
 
 ## Step 1: Start the Metro Server
 
