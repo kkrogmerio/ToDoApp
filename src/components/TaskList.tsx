@@ -5,14 +5,11 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   Modal,
   Portal,
-  Provider,
   TextInput,
   Button as PaperButton,
 } from 'react-native-paper';
 import COLORS from '../constants/colors';
 import {SafeAreaView} from 'react-native-safe-area-context';
-
-
 
 import {
   useAnimation,
@@ -20,7 +17,7 @@ import {
   useFocus,
   useTasks,
 } from '../state/tasks/hooks';
-import {TaskBar as TabBar,TaskInput,TaskItem} from '.';
+import {TaskBar as TabBar, TaskInput, TaskItem} from '.';
 
 const TaskList: React.FC = () => {
   const [newTaskTitle, setNewTaskTitle] = useState('');
@@ -34,75 +31,70 @@ const TaskList: React.FC = () => {
   const {buttonScale, animateButtonPress, opacity} = useAnimation();
   const filteredTasks = useFilter(tasks, filter);
 
-
   return (
-    <Provider>
-      <SafeAreaView style={styles.safeArea}>
-        <Animated.View style={[styles.container, {opacity}]}>
-          <TabBar filter={filter} setFilter={setFilter} />
+    <SafeAreaView style={styles.safeArea}>
+      <Animated.View style={[styles.container, {opacity}]}>
+        <TabBar filter={filter} setFilter={setFilter} />
 
-          {filter == 'uncompleted' && (
-            <TaskInput
-              newTaskTitle={newTaskTitle}
-              setNewTaskTitle={setNewTaskTitle}
-              addTask={string => {
-                addTask(string);
-                setNewTaskTitle('');
-              }}
-              animateButtonPress={animateButtonPress}
-              isFocused={isFocused}
-              handleFocus={handleFocus}
-              handleBlur={handleBlur}
-              buttonScale={buttonScale}
+        {filter == 'uncompleted' && (
+          <TaskInput
+            newTaskTitle={newTaskTitle}
+            setNewTaskTitle={setNewTaskTitle}
+            addTask={string => {
+              addTask(string);
+              setNewTaskTitle('');
+            }}
+            animateButtonPress={animateButtonPress}
+            isFocused={isFocused}
+            handleFocus={handleFocus}
+            handleBlur={handleBlur}
+            buttonScale={buttonScale}
+          />
+        )}
+
+        <FlatList
+          showsVerticalScrollIndicator={false}
+          style={styles.list}
+          data={filteredTasks}
+          keyExtractor={item => item.id.toString()}
+          renderItem={({item}) => (
+            <TaskItem
+              key={item.id}
+              item={item}
+              toggleTaskCompleted={toggleTaskCompleted}
+              setEditTaskId={setEditTaskId}
+              setEditTaskTitle={setEditTaskTitle}
+              deleteTask={deleteTask}
             />
           )}
+        />
 
-          <FlatList
-            showsVerticalScrollIndicator={false}
-            style={styles.list}
-            data={filteredTasks}
-            keyExtractor={item => item.id.toString()}
-            renderItem={({item}) => (
-              <TaskItem
-                key={item.id}
-                item={item}
-                toggleTaskCompleted={toggleTaskCompleted}
-                setEditTaskId={setEditTaskId}
-                setEditTaskTitle={setEditTaskTitle}
-                deleteTask={deleteTask}
+        <Portal>
+          <Modal
+            visible={editTaskId !== null}
+            onDismiss={() => setEditTaskId(null)}
+            contentContainerStyle={styles.modalContainer}>
+            <View style={styles.modalContent}>
+              <TextInput
+                style={styles.input}
+                value={editTaskTitle}
+                onChangeText={setEditTaskTitle}
+                placeholder={STRINGS.editTaskTitlePlaceholder}
               />
-            )}
-          />
 
-          <Portal>
-            <Modal
-              visible={editTaskId !== null}
-              onDismiss={() => setEditTaskId(null)}
-              contentContainerStyle={styles.modalContainer}>
-              <View style={styles.modalContent}>
-                <TextInput
-                  style={styles.input}
-                  value={editTaskTitle}
-                  onChangeText={setEditTaskTitle}
-                  placeholder={STRINGS.editTaskTitlePlaceholder}
-                />
-
-                <PaperButton
-                  style={styles.button}
-                  mode="contained"
-                  onPress={() =>
-                    editTask(editTaskId, editTaskTitle, () =>
-                      setEditTaskId(null),
-                    )
-                  }>
-                  {STRINGS.saveButtonLabel}
-                </PaperButton>
-              </View>
-            </Modal>
-          </Portal>
-        </Animated.View>
-      </SafeAreaView>
-    </Provider>
+              <PaperButton
+                style={styles.button}
+                mode="contained"
+                onPress={() =>
+                  editTask(editTaskId, editTaskTitle, () => setEditTaskId(null))
+                }>
+                {STRINGS.saveButtonLabel}
+              </PaperButton>
+            </View>
+          </Modal>
+        </Portal>
+      </Animated.View>
+    </SafeAreaView>
   );
 };
 
@@ -122,7 +114,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.borderGray,
 
-    marginBottom: 15  ,
+    marginBottom: 15,
     borderRadius: 5,
     backgroundColor: COLORS.white,
   },
