@@ -30,9 +30,11 @@ const TaskList: React.FC = () => {
   const {isFocused, handleFocus, handleBlur} = useFocus();
   const {buttonScale, animateButtonPress, opacity} = useAnimation();
   const filteredTasks = useFilter(tasks, filter);
-
+  const safeAreaOpacity=()=>{
+    return editTaskId!=null?0.2:1;
+  }
   return (
-    <SafeAreaView style={{...styles.safeArea,opacity:editTaskId!=null?0.2:1}}>
+    <SafeAreaView style={{...styles.safeArea,opacity:safeAreaOpacity()}}>
       <Animated.View style={[styles.container, {opacity}]}>
         <TabBar filter={filter} setFilter={setFilter} />
 
