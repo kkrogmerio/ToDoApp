@@ -1,9 +1,9 @@
 import STRINGS from '../constants/strings';
 import React, {useState, useEffect, useRef} from 'react';
-import {View, FlatList, Animated, StyleSheet} from 'react-native';
+import {View, FlatList, Animated, StyleSheet,  Modal,} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
-  Modal,
+
   Portal,
   TextInput,
   Button as PaperButton,
@@ -32,7 +32,7 @@ const TaskList: React.FC = () => {
   const filteredTasks = useFilter(tasks, filter);
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={{...styles.safeArea,opacity:editTaskId!=null?0.2:1}}>
       <Animated.View style={[styles.container, {opacity}]}>
         <TabBar filter={filter} setFilter={setFilter} />
 
@@ -71,9 +71,10 @@ const TaskList: React.FC = () => {
 
         <Portal>
           <Modal
+            transparent
             visible={editTaskId !== null}
             onDismiss={() => setEditTaskId(null)}
-            contentContainerStyle={styles.modalContainer}>
+            style={styles.modalContainer}>
             <View style={styles.modalContent}>
               <TextInput
                 style={styles.input}
@@ -129,9 +130,11 @@ const styles = StyleSheet.create({
   },
   modalContent: {
     backgroundColor: COLORS.white,
-    padding: 20,
+    paddingHorizontal:30,
     borderRadius: 10,
-    marginTop: 80,
+    paddingVertical:10,
+    alignSelf:'center',
+    top:120,
     width: '90%',
     maxHeight: '100%',
   },
