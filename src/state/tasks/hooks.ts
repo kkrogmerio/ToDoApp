@@ -9,12 +9,7 @@ import {v4 as uuidv4} from 'uuid';
 export function useTasks() {
   const [tasks, setTasks] = useState<Task[]>([]);
   const appState = useRef(AppState.currentState);
-  const tasksRef = useRef(tasks); 
-
-  useEffect(() => {
-    tasksRef.current = tasks;
-  }, [tasks]);
-
+ 
   useEffect(() => {
     (async () => {
       const tasks: Task[] = await loadTasksFromStorage();
@@ -30,8 +25,10 @@ export function useTasks() {
     if (
       nextAppState.match(/inactive|background/)
     ) {
-      console.log('App is going to the background!');
-      AsyncStorage.setItem('@tasks', JSON.stringify(tasksRef.current));
+      setTasks((currentTasks) => {
+        AsyncStorage.setItem('@tasks', JSON.stringify(currentTasks));
+        return currentTasks;
+      });
     }
   };
 
