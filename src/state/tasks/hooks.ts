@@ -1,25 +1,39 @@
-import  {useState, useEffect, useRef} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {loadTasksFromStorage} from '../../utils/asyncStorage';
 import {Task} from '../../types/tasks';
-import {Animated,Alert} from 'react-native';
+import {Animated, Alert, AppState, AppStateStatus} from 'react-native';
 import 'react-native-get-random-values';
-import { v4 as uuidv4 } from 'uuid';
+import {v4 as uuidv4} from 'uuid';
 
 export function useTasks() {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const appState = useRef(AppState.currentState);
+  const tasksRef = useRef(tasks); 
+
+  useEffect(() => {
+    tasksRef.current = tasks;
+  }, [tasks]);
 
   useEffect(() => {
     (async () => {
       const tasks: Task[] = await loadTasksFromStorage();
       setTasks(tasks);
     })();
-    return ()=>{
-      AsyncStorage.setItem('@tasks', JSON.stringify(tasks));
-    }
+    const listener = AppState.addEventListener('change', handleAppStateChange);
+    return () => {
+      listener.remove();
+    };
   }, []);
-
-
+  const handleAppStateChange = (nextAppState: AppStateStatus) => {
+    console.log(nextAppState,appState);
+    if (
+      nextAppState.match(/inactive|background/)
+    ) {
+      console.log('App is going to the background!');
+      AsyncStorage.setItem('@tasks', JSON.stringify(tasksRef.current));
+    }
+  };
 
   const addTask = (newTaskTitle: string) => {
     if (!newTaskTitle) return;
@@ -33,7 +47,7 @@ export function useTasks() {
     setTasks(prevTasks => [...prevTasks, newTask]);
   };
 
-  const toggleTaskCompleted = (id:string) => {
+  const toggleTaskCompleted = (id: string) => {
     setTasks(
       tasks.map(task =>
         task.id === id ? {...task, completed: !task.completed} : task,
@@ -41,22 +55,26 @@ export function useTasks() {
     );
   };
 
-  const deleteTask = (id:string) => {
+  const deleteTask = (id: string) => {
     setTasks(tasks.filter(task => task.id !== id));
   };
 
-const editTask = (editTaskId: string | null, editTaskTitle: string, resetEditTaskId: Function) => {
+  const editTask = (
+    editTaskId: string | null,
+    editTaskTitle: string,
+    resetEditTaskId: Function,
+  ) => {
     if (editTaskTitle.trim().length === 0) {
-        Alert.alert('Error', 'Task title cannot be empty');
-        return;
-      }
+      Alert.alert('Error', 'Task title cannot be empty');
+      return;
+    }
     setTasks(
       tasks.map(task =>
         task.id === editTaskId ? {...task, title: editTaskTitle} : task,
       ),
     );
     resetEditTaskId(); // Reset the editTaskId after editing the task
-};
+  };
 
   return {tasks, addTask, toggleTaskCompleted, deleteTask, editTask};
 }
