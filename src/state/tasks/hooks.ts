@@ -1,8 +1,10 @@
-import React, {useState, useEffect, useRef} from 'react';
+import  {useState, useEffect, useRef} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {loadTasksFromStorage} from '../../utils/asyncStorage';
 import {Task} from '../../types/tasks';
 import {Animated,Alert} from 'react-native';
+import 'react-native-get-random-values';
+import { v4 as uuidv4 } from 'uuid';
 
 export function useTasks() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -12,17 +14,18 @@ export function useTasks() {
       const tasks: Task[] = await loadTasksFromStorage();
       setTasks(tasks);
     })();
+    return ()=>{
+      AsyncStorage.setItem('@tasks', JSON.stringify(tasks));
+    }
   }, []);
 
-  useEffect(() => {
-    AsyncStorage.setItem('@tasks', JSON.stringify(tasks));
-  }, [tasks]);
+
 
   const addTask = (newTaskTitle: string) => {
     if (!newTaskTitle) return;
 
     const newTask = {
-      id: tasks.length + 1,
+      id: uuidv4(),
       title: newTaskTitle,
       completed: false,
     };
@@ -30,7 +33,7 @@ export function useTasks() {
     setTasks(prevTasks => [...prevTasks, newTask]);
   };
 
-  const toggleTaskCompleted = (id: number) => {
+  const toggleTaskCompleted = (id:string) => {
     setTasks(
       tasks.map(task =>
         task.id === id ? {...task, completed: !task.completed} : task,
@@ -38,11 +41,11 @@ export function useTasks() {
     );
   };
 
-  const deleteTask = (id: number) => {
+  const deleteTask = (id:string) => {
     setTasks(tasks.filter(task => task.id !== id));
   };
 
-const editTask = (editTaskId: number | null, editTaskTitle: string, resetEditTaskId: Function) => {
+const editTask = (editTaskId: string | null, editTaskTitle: string, resetEditTaskId: Function) => {
     if (editTaskTitle.trim().length === 0) {
         Alert.alert('Error', 'Task title cannot be empty');
         return;

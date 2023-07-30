@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		207AC08FEFD95F4964C7867E /* libPods-Thunkable-ThunkableTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E61AF1488816BD2ABA8AAC /* libPods-Thunkable-ThunkableTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		A7707A29AC2077A94AA8F244 /* libPods-Thunkable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F99E487DEEF4CAC3EEA6076B /* libPods-Thunkable.a */; };
+		D732BE792CE0D090CD7F2DDD /* libPods-Thunkable-ThunkableTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3673C0AB7CF3A4DCF3DA3D6 /* libPods-Thunkable-ThunkableTests.a */; };
+		F6C5446F1E21673345B656FA /* libPods-Thunkable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB30DB6B78C90E644EE3A319 /* libPods-Thunkable.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Thunkable/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Thunkable/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Thunkable/main.m; sourceTree = "<group>"; };
-		1ADD2DB345A378226F38C65B /* Pods-Thunkable-ThunkableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunkable-ThunkableTests.debug.xcconfig"; path = "Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3967E568E039600D1AE31555 /* Pods-Thunkable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunkable.release.xcconfig"; path = "Target Support Files/Pods-Thunkable/Pods-Thunkable.release.xcconfig"; sourceTree = "<group>"; };
+		15E4B3D374D77FDC8802B888 /* Pods-Thunkable-ThunkableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunkable-ThunkableTests.debug.xcconfig"; path = "Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Thunkable/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AC9AC89C50DEFD0DA73CBC96 /* Pods-Thunkable-ThunkableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunkable-ThunkableTests.release.xcconfig"; path = "Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests.release.xcconfig"; sourceTree = "<group>"; };
-		BE1C155D490DA79DA8A67758 /* Pods-Thunkable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunkable.debug.xcconfig"; path = "Target Support Files/Pods-Thunkable/Pods-Thunkable.debug.xcconfig"; sourceTree = "<group>"; };
-		C1E61AF1488816BD2ABA8AAC /* libPods-Thunkable-ThunkableTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thunkable-ThunkableTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E4C6940EF7B48D9ABE4DC1 /* Pods-Thunkable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunkable.release.xcconfig"; path = "Target Support Files/Pods-Thunkable/Pods-Thunkable.release.xcconfig"; sourceTree = "<group>"; };
+		A45A0EA94D8F260DADB10F02 /* Pods-Thunkable-ThunkableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunkable-ThunkableTests.release.xcconfig"; path = "Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB30DB6B78C90E644EE3A319 /* libPods-Thunkable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thunkable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F99E487DEEF4CAC3EEA6076B /* libPods-Thunkable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thunkable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3673C0AB7CF3A4DCF3DA3D6 /* libPods-Thunkable-ThunkableTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Thunkable-ThunkableTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4BC4C0979EE247ADDC33056 /* Pods-Thunkable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thunkable.debug.xcconfig"; path = "Target Support Files/Pods-Thunkable/Pods-Thunkable.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				207AC08FEFD95F4964C7867E /* libPods-Thunkable-ThunkableTests.a in Frameworks */,
+				D732BE792CE0D090CD7F2DDD /* libPods-Thunkable-ThunkableTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7707A29AC2077A94AA8F244 /* libPods-Thunkable.a in Frameworks */,
+				F6C5446F1E21673345B656FA /* libPods-Thunkable.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				F99E487DEEF4CAC3EEA6076B /* libPods-Thunkable.a */,
-				C1E61AF1488816BD2ABA8AAC /* libPods-Thunkable-ThunkableTests.a */,
+				DB30DB6B78C90E644EE3A319 /* libPods-Thunkable.a */,
+				F3673C0AB7CF3A4DCF3DA3D6 /* libPods-Thunkable-ThunkableTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BE1C155D490DA79DA8A67758 /* Pods-Thunkable.debug.xcconfig */,
-				3967E568E039600D1AE31555 /* Pods-Thunkable.release.xcconfig */,
-				1ADD2DB345A378226F38C65B /* Pods-Thunkable-ThunkableTests.debug.xcconfig */,
-				AC9AC89C50DEFD0DA73CBC96 /* Pods-Thunkable-ThunkableTests.release.xcconfig */,
+				F4BC4C0979EE247ADDC33056 /* Pods-Thunkable.debug.xcconfig */,
+				83E4C6940EF7B48D9ABE4DC1 /* Pods-Thunkable.release.xcconfig */,
+				15E4B3D374D77FDC8802B888 /* Pods-Thunkable-ThunkableTests.debug.xcconfig */,
+				A45A0EA94D8F260DADB10F02 /* Pods-Thunkable-ThunkableTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ThunkableTests" */;
 			buildPhases = (
-				9C0F6CD93B99BDF3A4B6E8C6 /* [CP] Check Pods Manifest.lock */,
+				75B0DFBE733F38264B674857 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				E35DB37B3C98029203A8F48B /* [CP] Embed Pods Frameworks */,
-				5049D23637384DA46BF0B31B /* [CP] Copy Pods Resources */,
+				D52321BA25DCCE4604D5F9CD /* [CP] Embed Pods Frameworks */,
+				BE648CA7E255472FDC861816 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Thunkable" */;
 			buildPhases = (
-				3DDCA084F6EEF0B85889CDDC /* [CP] Check Pods Manifest.lock */,
+				680A20A5C17AD675D90E8F2C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C5ED5EE64E3C03B98B8D891F /* [CP] Embed Pods Frameworks */,
-				609DB0DC56E48623F0902144 /* [CP] Copy Pods Resources */,
+				64D9AB9DAEF8D021CA58935D /* [CP] Embed Pods Frameworks */,
+				52F339AF6933C80B7D0C9727 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,7 +266,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		3DDCA084F6EEF0B85889CDDC /* [CP] Check Pods Manifest.lock */ = {
+		52F339AF6933C80B7D0C9727 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64D9AB9DAEF8D021CA58935D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		680A20A5C17AD675D90E8F2C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,41 +322,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5049D23637384DA46BF0B31B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		609DB0DC56E48623F0902144 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C0F6CD93B99BDF3A4B6E8C6 /* [CP] Check Pods Manifest.lock */ = {
+		75B0DFBE733F38264B674857 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,24 +344,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5ED5EE64E3C03B98B8D891F /* [CP] Embed Pods Frameworks */ = {
+		BE648CA7E255472FDC861816 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thunkable/Pods-Thunkable-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Thunkable-ThunkableTests/Pods-Thunkable-ThunkableTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E35DB37B3C98029203A8F48B /* [CP] Embed Pods Frameworks */ = {
+		D52321BA25DCCE4604D5F9CD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -430,7 +430,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ADD2DB345A378226F38C65B /* Pods-Thunkable-ThunkableTests.debug.xcconfig */;
+			baseConfigurationReference = 15E4B3D374D77FDC8802B888 /* Pods-Thunkable-ThunkableTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -457,7 +457,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC9AC89C50DEFD0DA73CBC96 /* Pods-Thunkable-ThunkableTests.release.xcconfig */;
+			baseConfigurationReference = A45A0EA94D8F260DADB10F02 /* Pods-Thunkable-ThunkableTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -481,7 +481,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE1C155D490DA79DA8A67758 /* Pods-Thunkable.debug.xcconfig */;
+			baseConfigurationReference = F4BC4C0979EE247ADDC33056 /* Pods-Thunkable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -508,7 +508,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3967E568E039600D1AE31555 /* Pods-Thunkable.release.xcconfig */;
+			baseConfigurationReference = 83E4C6940EF7B48D9ABE4DC1 /* Pods-Thunkable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
