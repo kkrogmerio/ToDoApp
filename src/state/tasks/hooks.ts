@@ -70,7 +70,7 @@ export function useTasks() {
         task.id === editTaskId ? {...task, title: editTaskTitle} : task,
       ),
     );
-    resetEditTaskId(); // Reset the editTaskId after editing the task
+    resetEditTaskId();
   };
 
   return {tasks, addTask, toggleTaskCompleted, deleteTask, editTask};
